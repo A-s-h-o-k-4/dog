@@ -16,7 +16,7 @@ function Signup({setLog}) {
     setError('')
     if (name !== '' && email !== '' && password !== '' && repass !== '') {
       if (password === repass) {
-        const res = await fetch('http://localhost:3000/signup',{method:'post',headers:{'content-type':'application/json'},body:JSON.stringify({'name':name,'email':email,'password':password})}) 
+        const res = await fetch('https://dog-jg7i.onrender.com/signup',{method:'post',headers:{'content-type':'application/json'},body:JSON.stringify({'name':name,'email':email,'password':password})}) 
         const data = await res.json()
         if (data.method == false) {
           setError('You Already Servey')

@@ -17,7 +17,7 @@ function Login({setLog}) {
     setError('')
     
     if (email !== '' && pass !== '') {
-      const res = await fetch('http://localhost:3000/login',{method:'post',body:JSON.stringify({email: email,pass:pass}),headers:{'content-type':'application/json'}})
+      const res = await fetch('https://dog-jg7i.onrender.com/login',{method:'post',body:JSON.stringify({email: email,pass:pass}),headers:{'content-type':'application/json'}})
       const data = await res.json()
       if (data.method == true) {
         setLog(true)
