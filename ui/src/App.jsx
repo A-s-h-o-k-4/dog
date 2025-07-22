@@ -14,7 +14,7 @@ function App() {
     const ok = confirm('Confirm Logout!')
     if(ok){
       setLog(false);
-      window.location.href='https://dog-jg7i.onrender.com/login'
+      window.location.href='https://pet1care.vercel.app/login'
     }
   }
   
