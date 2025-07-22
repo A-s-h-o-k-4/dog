@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Route,Routes,Link} from 'react-router-dom'
+import {Route,Routes,Link,useNavigate} from 'react-router-dom'
 import Home from './Nav/Home'
 import Login from './Nav/Login'
 import About from './Nav/About'
@@ -9,12 +9,13 @@ import Services from './Nav/Services'
 function App() {
 
   const [log,setLog] = useState(false)
+  const navigate=useNavigate()
 
   function out(){
     const ok = confirm('Confirm Logout!')
     if(ok){
       setLog(false);
-      window.location.href='http://localhost:5173/login'
+      navigate('/login')
     }
   }
   
