@@ -26,6 +26,9 @@ function Login({setLog}) {
       if (data.method == false) {
         setError('Enter Correct Password!')
       }
+      if (data.datano == false) {
+        setError('Signup First!')
+      }
     }else{
       setError('Enter Inputs')
     }

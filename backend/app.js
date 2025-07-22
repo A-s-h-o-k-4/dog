@@ -30,10 +30,14 @@ app.post('/login',async (req,res)=>{
         console.log(req.body)
         const {email,pass} = req.body;
         const verify = await frame.findOne({email : email})
-        if (verify.email == email && pass == verify.password) {
-            res.json({message:'Verified Data',method:true})   
+        if (verify) {
+            if (verify.email == email && pass == verify.password) {
+                res.json({message:'Verified Data',method:true})   
+            }else{
+                res.json({message:'Not Matched Password',method:false})
+            }      
         }else{
-            res.json({message:'Not Matched Password',method:false})
+            res.json({message:'Not Matched Password',datano:false})
         }
     }catch(err){
         console.log(err)
