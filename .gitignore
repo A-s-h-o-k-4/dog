@@ -1,0 +1,8 @@
+backend/.env
+backend/node_modules/
+backend/build/
+backend/dist/
+
+ui/node_modules/
+ui/dist/
+ui/build/
